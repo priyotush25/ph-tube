@@ -42,9 +42,26 @@ const displayVideos = (videos) => {
             alt="Shoes"
           />
         </figure>
-        <div class="card-body flex flex-row items-center gap-5">
-          <img src=${video.authors[0].profile_picture} alt=""  class="h-16 w-16 object-cover rounded-full"/>
+        <div class="p-4 flex flex-row items-center gap-5">
+          
+
+          <div>
+          <img src=${
+            video.authors[0].profile_picture
+          } alt=""  class="h-11 w-11 object-cover rounded-full"/>
+          </div>
+          <div>
           <h2 class="text-2xl font-bold">${video.title}</h2>
+         <div class="flex items-center gap-4">
+          <p>${video.authors[0].profile_name}</p>
+          <p>${
+            video.authors[0].verified === true
+              ? ` <img src="./assets/verified.svg" alt="" />`
+              : ""
+          }</p>
+         </div>
+          </div>
+          
         </div>
       </div>
   
