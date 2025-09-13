@@ -35,13 +35,19 @@ const displayVideos = (videos) => {
     videosContainer.innerHTML += `
     
       <div class="card bg-base-100 w-full shadow-sm">
-        <figure>
+        <figure class="relative">
           <img
           class="h-64 w-full object-cover"
             src=${video.thumbnail}
             alt="Shoes"
           />
+
+      
+
         </figure>
+          <span class="absolute text-base text-white bg-black px-2 py-1 rounded-lg bottom-24 right-2">${
+            video.others.posted_date
+          }</span>
         <div class="p-4 flex flex-row items-center gap-5">
           
 
